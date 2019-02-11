@@ -37,6 +37,6 @@ public class CryptocurrencyBank {
 
     public int metcalfeLaw(){
         if(customersNumber==1) return 1;
-        return customersNumber*2-customersNumber;
+        return (customersNumber)*(customersNumber-1);
     }
 }

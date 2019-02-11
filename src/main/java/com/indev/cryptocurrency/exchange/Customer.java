@@ -21,11 +21,7 @@ public class Customer {
     }
 
     public void decreaseBalance(int balance, int _x){
-        this.balance-=balance;
-    }
-
-    public void addSold(int sold, int _x){
-        this.sold+=sold*_x;
+        this.balance-=balance*_x;
     }
 
     public void decreaseSold(int sold){
