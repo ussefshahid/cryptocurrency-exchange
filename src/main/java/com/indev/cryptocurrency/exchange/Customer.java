@@ -16,20 +16,20 @@ public class Customer {
         return this;
     }
 
-    public void addBalance(int balance, int _x){
-        this.balance+=balance*_x;
+    public void addBalance(int balance, int metcalfeLaw){
+        this.balance+=balance*metcalfeLaw;
     }
 
-    public void decreaseBalance(int balance, int _x){
-        this.balance-=balance*_x;
+    public void decreaseBalance(int balance, int metcalfeLaw){
+        this.balance-=balance*metcalfeLaw;
     }
 
     public void decreaseSold(int sold){
         this.sold-=sold;
     }
 
-    public void sellCrypto(int sold, int _x){
-        addBalance(sold, _x);
+    public void sellCrypto(int sold, int metcalfeLaw){
+        addBalance(sold, metcalfeLaw);
         decreaseSold(sold);
     }
 
@@ -39,7 +39,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        String print=+balance+":$";
-        return print + ((sold > 0) ? "," + sold + ":" + cryptoCurrency : "");
+        return balance + ":$" + ((sold > 0) ? "," + sold + ":" + cryptoCurrency : "");
     }
 }
