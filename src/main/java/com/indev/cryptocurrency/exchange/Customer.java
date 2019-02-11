@@ -40,6 +40,6 @@ public class Customer {
     @Override
     public String toString() {
         String print=+balance+":$";
-        return print+=(sold>0)? ","+sold+":"+cryptoCurrency: "";
+        return print + ((sold > 0) ? "," + sold + ":" + cryptoCurrency : "");
     }
 }
