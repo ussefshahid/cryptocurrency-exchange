@@ -1,8 +1,11 @@
 package com.indev.cryptocurrency.exchange;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class CryptocurrencyBank {
     private List<String> supportedCryptoCurrencies=new ArrayList<>();
     private List<Customer> sellerCustomers =new ArrayList<>();
@@ -48,5 +51,14 @@ public class CryptocurrencyBank {
     public int metcalfeLaw(){
         if(customersNumber==1) return 1;
         return (customersNumber)*(customersNumber-1);
+    }
+
+    public List<String> getSupportedCryptoCurrencies() {
+        return supportedCryptoCurrencies;
+    }
+
+    public List<String> deleteCryptoCurrency(String cryptoCurrencyName) {
+        supportedCryptoCurrencies.removeIf(crypto -> !crypto.equals(cryptoCurrencyName));
+        return supportedCryptoCurrencies;
     }
 }
