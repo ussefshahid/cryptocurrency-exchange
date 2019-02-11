@@ -27,9 +27,9 @@ public class CryptocurrencyBank {
         sellerCustomers.add(sellerCustomer);
     }
 
-    public boolean isSellerExist(String bitcoin){
+    public boolean isSellerExist(String cryptCurrency){
         return sellerCustomers.stream()
-                .filter(customer -> customer.isSameCryptoCurrency(bitcoin))
+                .filter(customer -> customer.isSameCryptoCurrency(cryptCurrency))
                 .findFirst()
                 .orElse(null) != null;
     }
